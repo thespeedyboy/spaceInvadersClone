@@ -1,16 +1,27 @@
 using UnityEngine;
 
-public class playerController : MonoBehaviour
-{
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+public class PlayerController : MonoBehaviour
+{ 
+    [SerializeField] private float movementSpeed = 5f;
+    private Rigidbody2D rb;
+
+    private void Start()
     {
-        
+        rb = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        HandleMovement();
+    }
+
+    private void HandleMovement()
+    {
+        float moveInput = Input.GetAxis("Horizontal");
+
+        Vector2 velocity = rb.linearVelocity;
+        velocity.x = moveInput * movementSpeed;
+        rb.linearVelocity = velocity;
     }
 }
+
