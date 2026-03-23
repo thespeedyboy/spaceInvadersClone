@@ -14,14 +14,12 @@ public class PlayerController : MonoBehaviour
     {
         HandleMovement();
     }
-
-    private void HandleMovement()
-    {
-        float moveInput = Input.GetAxis("Horizontal");
-
-        Vector2 velocity = rb.linearVelocity;
-        velocity.x = moveInput * movementSpeed;
-        rb.linearVelocity = velocity;
-    }
+   private void HandleMovement()
+   {
+       float moveInput = Input.GetAxis("Horizontal");
+       Vector2 velocity = rb.linearVelocity;
+       velocity.x = moveInput * movementSpeed;
+       rb.linearVelocity = velocity;
+   }
 }
 
