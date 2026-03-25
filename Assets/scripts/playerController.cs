@@ -52,17 +52,17 @@ public class PlayerController : MonoBehaviour
         rb.position = pos;
     }
     private void HandleTilt()
-    {
-        float targetTilt = -moveInput * tiltAmount;
+{
+    float targetTilt = -moveInput * tiltAmount;
 
-        float newZ = Mathf.LerpAngle(
-            rb.rotation,
-            targetTilt,
-            tiltSpeed * Time.fixedDeltaTime
-        );
+    float newZ = Mathf.LerpAngle(
+        rb.rotation,
+        targetTilt,
+        tiltSpeed * Time.fixedDeltaTime
+    );
 
-        rb.MoveRotation(newZ);
-    }
+    rb.MoveRotation(newZ);
+}
 
     // Input stays the same
     public void Move(InputAction.CallbackContext context)

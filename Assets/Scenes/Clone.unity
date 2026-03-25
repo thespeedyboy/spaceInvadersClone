@@ -455,7 +455,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d63500f930959645820d2833fd06f3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
-  tiltAmount: 10
+  tiltAmount: 8
   tiltSpeed: 8
   movementSpeed: 8
   acceleration: 12
