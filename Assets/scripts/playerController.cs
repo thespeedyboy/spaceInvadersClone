@@ -3,13 +3,14 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+    [Header("Movement Settings")]
     [SerializeField] private float tiltAmount = 15f;    
     [SerializeField] private float tiltSpeed = 10f;      
     [SerializeField] private float movementSpeed = 8f;
     [SerializeField] private float acceleration = 12f;
     [SerializeField] private float deceleration = 25f;
 
-    // Screen bounds
+    [Header("Bounds")]
     [SerializeField] private float leftBound = -8f;
     [SerializeField] private float rightBound = 8f;
 
