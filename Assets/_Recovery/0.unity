@@ -1181,10 +1181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec5b96fab5782fa468b16151b927a069, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpawnManager
-  enemyPrefabs:
-  - {fileID: 2802566073933911561, guid: 9e132e1b8dc067e40a31fd42ee33e265, type: 3}
-  - {fileID: 5230803116013637995, guid: 4018e04ae7ce110468180855610cd09c, type: 3}
-  - {fileID: 7990128425627747383, guid: 4a949930f9faea045978529e1d8c7ec5, type: 3}
+  enemyPrefab: {fileID: 2802566073933911561, guid: 9e132e1b8dc067e40a31fd42ee33e265, type: 3}
   spawnRate: 2
   minSpawnRate: 0.5
   difficultyIncrease: 0.1

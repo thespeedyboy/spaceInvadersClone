@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
-    public GameObject enemyPrefab;
+    public GameObject[] enemyPrefabs; // Array for multiple enemies
 
     public float spawnRate = 2f;
     public float minSpawnRate = 0.5f;
@@ -24,18 +24,20 @@ public class SpawnManager : MonoBehaviour
         float randomX = Random.Range(minX, maxX);
         Vector2 spawnPos = new Vector2(randomX, spawnY);
 
-        Instantiate(enemyPrefab, spawnPos, Quaternion.identity);
+        // Pick a random enemy from the array
+        int index = Random.Range(0, enemyPrefabs.Length);
+        GameObject chosenEnemy = enemyPrefabs[index];
+
+        Instantiate(chosenEnemy, spawnPos, Quaternion.identity);
     }
 
     void IncreaseDifficulty()
     {
-        // Make spawn faster
         spawnRate -= difficultyIncrease;
 
         if (spawnRate < minSpawnRate)
             spawnRate = minSpawnRate;
 
-        // Restart spawning with new rate
         CancelInvoke("SpawnEnemy");
         InvokeRepeating("SpawnEnemy", 0.5f, spawnRate);
     }
