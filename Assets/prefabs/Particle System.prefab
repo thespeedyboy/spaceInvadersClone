@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8585738515014364270}
   - component: {fileID: 5731785245379157304}
   - component: {fileID: 3863828272191039702}
+  - component: {fileID: -6029011356908556200}
   m_Layer: 0
   m_Name: Particle System
   m_TagString: Untagged
@@ -4836,3 +4837,15 @@ ParticleSystemRenderer:
   m_MeshWeighting1: 1
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
+--- !u!114 &-6029011356908556200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2120185398464916915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f25e044d9f2e1241b4ac25c4326f515, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CursorController
