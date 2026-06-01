@@ -154,6 +154,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::basicEnemy
   speed: 2
   scoreValue: 10
+  AudioSource: {fileID: 0}
+  DestroySound: {fileID: 8300000, guid: 69194f29f50ef3e41b7719564f0c54c0, type: 3}
 --- !u!50 &6761162220363184821
 Rigidbody2D:
   serializedVersion: 5

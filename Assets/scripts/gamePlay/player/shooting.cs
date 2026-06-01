@@ -9,12 +9,21 @@ public class shooting : MonoBehaviour
     [SerializeField] float BulletSpeed = 10f;
     [SerializeField] private float fireRate = 0.5f;
     [SerializeField] private float bulletLifetime = 3f;
+    [SerializeField] AudioClip shootSound;
+    [SerializeField] AudioSource audioSource;
     [Header("Events")]
     public UnityEvent onShoot; // Hook up animations, sounds, etc.
 
     private float nextFireTime = 0f;
 
     // This method will be called automatically by Player Input
+    public void PlayShootSound()
+    {
+        if (shootSound != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(shootSound);
+        }
+    }
     public void OnShoot()
     {
         if (Time.time >= nextFireTime)
